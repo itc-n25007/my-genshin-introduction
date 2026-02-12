@@ -2,43 +2,47 @@
 
 ## 使用技術
 
-・Next.js
-・TypeScript
-・ESLint
-・CSS Moducles
-・MicroCMS
-・GitHub
-・Vercel
+- Next.js
+- TypeScript
+- ESLint
+- CSS Moducles
+- MicroCMS
+- GitHub
+- Vercel
 
 ## サイト全体の機能一覧
 
 ①トップページ
-・メインビジュアル表示
-・各ページへのリンク設置
-　・キャラクター一覧
-　・世界観・システム
-　・お問い合わせ
+
+- メインビジュアル表示
+- 各ページへのリンク設置
+  　・キャラクター一覧
+  　・世界観・システム
+  　・お問い合わせ
 
 ②キャラクター一覧ページ
-・microCMSからデータ取得
-・３列グリッド表示（PC）
-・キャラクター画像表示
-・元素表示
-・説明表示
-・トップページへ戻るボタン
-・ページネーション（９件ずつ表示）
+
+- microCMSからデータ取得
+- ３列グリッド表示（PC）
+- キャラクター画像表示
+- 元素表示
+- 説明表示
+- トップページへ戻るボタン
+- ページネーション（９件ずつ表示）
 
 ③世界観・システムページ
-・microCMSからデータ取得
-・レイアウト整備
-・トップページへ戻るボタン
+
+- microCMSからデータ取得
+- レイアウト整備
+- トップページへ戻るボタン
 
 ④お問い合わせページ
-・Client Component化
-・入力状態管理（状態管理機能）
-・送信完了状態管理
-・送信処理
-・バリデーション機能（HTML標準の必須チェック、未入力で送信不可）
+
+- Client Component化
+- 入力状態管理（状態管理機能）
+- 送信完了状態管理
+- 送信処理
+- バリデーション機能（HTML標準の必須チェック、未入力で送信不可）
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
