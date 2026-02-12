@@ -17,13 +17,23 @@ const PER_PAGE = 9;
 
 /**キャラクター一覧を取得（ページ対応） */
 export const getCharacters = async (page = 1, searchQuery?: string) => {
+  const queries: any = {
+    limit: PER_PAGE,
+    offset: (page - 1) * PER_PAGE,
+  };
+
+  //検索文字があるときだけ追加
+  if (searchQuery && searchQuery.trim() !== "") {
+    queries.q = searchQuery;
+  }
   const data = await client.get<MicroCMSListResponse<Character>>({
     endpoint: "characters",
-    queries: {
+    queries,
+    /*queries: {
       limit: PER_PAGE,
       offset: (page - 1) * PER_PAGE,
       q: searchQuery || undefined,
-    },
+    },*/
   });
 
   return {

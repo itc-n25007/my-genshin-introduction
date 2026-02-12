@@ -13,30 +13,6 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    {
-      /*const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        message,
-      }),
-    });
-
-    if (res.ok) {
-      alert("お問い合わせを送信しました");
-      setName("");
-      setEmail("");
-      setMessage("");
-    } else {
-      alert("送信に失敗しました");
-    }
-  };*/
-    }
-
     // 今回は送信処理なし（ダミー）
     setSent(true);
 

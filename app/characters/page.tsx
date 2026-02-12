@@ -35,6 +35,9 @@ export default async function CharactersPage({ searchParams }: Props) {
         <button type="submit" className={styles.searchButton}>
           検索
         </button>
+        {characters.length === 0 && (
+          <p>該当するキャラクターが見つかりませんでした。</p>
+        )}
       </form>
 
       {/* キャラクター一覧 */}
