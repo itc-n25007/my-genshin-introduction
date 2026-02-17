@@ -63,3 +63,33 @@
   font-weight: bold;
   margin-bottom: 16px;
 }
+
+/*スマホ*/
+@media (max-width: 768px) {
+  .main {
+    padding: 24px 16px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .form {
+    gap: 16px;
+  }
+
+  .form label {
+    font-size: 13px;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 16px; /*←　重要：iphoneズーム防止 */
+    padding: 14px;
+  }
+
+  .form button {
+    font-size: 16px;
+    padding: 16px;
+  }
+}
