@@ -19,6 +19,7 @@
   　・キャラクター一覧
   　・世界観・システム
   　・お問い合わせ
+- スマホ対応
 
 ②キャラクター一覧ページ
 
@@ -29,20 +30,27 @@
 - 説明表示
 - トップページへ戻るボタン
 - ページネーション（９件ずつ表示）
+- スマホ対応
 
 ③世界観・システムページ
 
 - microCMSからデータ取得
 - レイアウト整備
 - トップページへ戻るボタン
+- スマホ対応
 
 ④お問い合わせページ
 
-- Client Component化
-- 入力状態管理（状態管理機能）
-- 送信完了状態管理
-- 送信処理
-- バリデーション機能（HTML標準の必須チェック、未入力で送信不可）
+- Client Component化 ("use client")
+- 入力状態管理（状態管理機能） (useState)
+- 送信完了状態管理 (sent)
+- 送信処理 (ダミー)
+- バリデーション機能（HTML標準の必須チェック、未入力で送信不可）　(required)
+- スマホ対応 (CSSメディアクエリ)
+- フォーム送信のページリロード防止 ("e.preventDefault();")
+  →これがないとページリロードされる、Reactフォームとして正しく動いている証拠
+- 制御コンポーネント("value={name} onChange={(e) => setName(e.target.value)}")
+  →Reactが入力値を完全に管理、送信後にリセットできる、状態とUIが同期している
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
