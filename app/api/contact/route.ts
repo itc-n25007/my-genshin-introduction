@@ -1,21 +1,33 @@
-import { NextResponse } from "next/server";
-import { client } from "@/app/_libs/microcms";
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
+    const { name, email, message } = await req.json();
 
-    await client.create({
-      endpoint: "contact",
-      content: {
-        name: body.name,
-        email: body.email,
-        message: body.message,
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
       },
     });
 
-    return NextResponse.json({ success: true });
+    await transporter.sendMail({
+      from: process.env.GMAIL_USER,
+      to: "n25007@std.it-college.ac.jp",
+      subject: "お問い合わせが届きました",
+      text: `
+名前: ${name}
+メール: ${email}
+
+内容:
+${message}
+      `,
+    });
+
+    return Response.json({ success: true });
   } catch (error) {
-    return NextResponse.json({ success: false }, { status: 500 });
+    console.error(error);
+    return Response.json({ success: false }, { status: 500 });
   }
 }
