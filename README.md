@@ -41,16 +41,12 @@
 
 ④お問い合わせページ
 
-- Client Component化 ("use client")
-- 入力状態管理（状態管理機能） (useState)
-- 送信完了状態管理 (sent)
-- 送信処理 (ダミー)
-- バリデーション機能（HTML標準の必須チェック、未入力で送信不可）　(required)
-- スマホ対応 (CSSメディアクエリ)
-- フォーム送信のページリロード防止 ("e.preventDefault();")
-  →これがないとページリロードされる、Reactフォームとして正しく動いている証拠
-- 制御コンポーネント("value={name} onChange={(e) => setName(e.target.value)}")
-  →Reactが入力値を完全に管理、送信後にリセットできる、状態とUIが同期している
+- microCMS連携（CMS管理）
+- フォーム入力機能
+- バリデーション（入力チェック）
+- 送信完了表示
+- API　Route（サーバー処理）
+- メール送信機能（nodemailer）
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
