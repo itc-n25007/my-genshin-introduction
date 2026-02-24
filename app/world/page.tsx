@@ -44,7 +44,6 @@ export default async function WorldPage() {
       <Link href="/" className={styles.backButton}>
         ←　トップページへ
       </Link>
-      {/*<div dangerouslySetInnerHTML={{ __html: data.content }} />*/}
     </main>
   );
 }

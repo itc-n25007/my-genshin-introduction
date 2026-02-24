@@ -13,14 +13,6 @@ export default function CountactForm({ thanksMessage }: Props) {
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
 
-  /*const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-
-    setName("");
-    setEmail("");
-    setMessage("");
-  };*/
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -40,7 +32,6 @@ export default function CountactForm({ thanksMessage }: Props) {
 
   return (
     <>
-      {/*{sent && <p className={styles.success}>{thanksMessage}</p>}*/}
       {sent && <p>{JSON.stringify(thanksMessage)}</p>}
 
       <form className={styles.form} onSubmit={handleSubmit}>

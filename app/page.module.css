@@ -42,11 +42,8 @@
 .hero {
   height: 70vh;
   width: 130%;
-  /*background-image: url("/public/images/genshin1.jpg");
-  background-size: cover;
-  background-position: center;*/
   position: relative;
-  /*background: linear-gradient(120deg, #2b6cb0, #63b3ed, #bee3f8);*/
+
   color: white;
 
   display: flex;
@@ -55,21 +52,7 @@
   align-items: center;
   text-align: center;
   padding: 0 16px;
-
-  /*position: relative;*/
 }
-
-/*.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.hero > * {
-  position: relative;
-  z-index: 1;
-}*/
 
 .heroImage {
   object-fit: cover;

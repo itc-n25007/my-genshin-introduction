@@ -29,11 +29,6 @@ export const getCharacters = async (page = 1, searchQuery?: string) => {
   const data = await client.get<MicroCMSListResponse<Character>>({
     endpoint: "characters",
     queries,
-    /*queries: {
-      limit: PER_PAGE,
-      offset: (page - 1) * PER_PAGE,
-      q: searchQuery || undefined,
-    },*/
   });
 
   return {
