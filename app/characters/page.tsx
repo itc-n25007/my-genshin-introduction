@@ -10,6 +10,8 @@ type Props = {
   };
 };
 
+export const revalidate = 0; //すぐに反映させたい
+
 export default async function CharactersPage({ searchParams }: Props) {
   const page = Number(searchParams.page ?? "1");
   const query = searchParams.q ?? "";
